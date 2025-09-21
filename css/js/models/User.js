@@ -1,4 +1,5 @@
-export class User {
+// js/models/User.js
+class User {
     constructor(data = {}) {
         this.id = data.id || null;
         this.name = data.name || '';
@@ -15,6 +16,10 @@ export class User {
         
         if (!userData.password || userData.password.length < 6) {
             errors.push('Password must be at least 6 characters');
+        }
+
+        if (userData.name && userData.name.trim().length < 2) {
+            errors.push('Name must be at least 2 characters');
         }
         
         return {

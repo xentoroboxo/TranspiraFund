@@ -1,14 +1,12 @@
+// js/views/LandingView.js
 export class LandingView {
-    constructor() {
-        this.element = null;
-    }
-
     render() {
+        console.log('LandingView.render called');
         return `
             <div class="container">
                 <div class="landing-container">
-                    <h1>Welcome to AppPortal</h1>
-                    <p>The central hub to manage your apps and activities.</p>
+                    <h1>Welcome to TranspiraFund</h1>
+                    <p>Your investment and funding management platform.</p>
                     <div class="row">
                         <button class="btn btn-primary" data-route="login">Login</button>
                         <button class="btn btn-ghost" data-route="register">Register</button>

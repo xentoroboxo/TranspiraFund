@@ -1,6 +1,5 @@
-import { User } from './User.js';
-
-export class Auth {
+// js/models/Auth.js
+class Auth {
     constructor() {
         this.currentUser = null;
         this.isLoggedIn = false;
@@ -9,10 +8,8 @@ export class Auth {
 
     async login(email, password) {
         try {
-            // Simulate API call
             await this.simulateApiCall();
             
-            // Demo validation
             if (email && password) {
                 this.currentUser = new User({
                     id: Date.now(),
@@ -32,13 +29,11 @@ export class Auth {
 
     async register(userData) {
         try {
-            // Validate user data
             const validation = User.validate(userData);
             if (!validation.isValid) {
                 throw new Error(validation.errors.join(', '));
             }
 
-            // Simulate API call
             await this.simulateApiCall();
             
             this.currentUser = new User({
@@ -63,7 +58,6 @@ export class Auth {
 
     async googleLogin() {
         try {
-            // Simulate Google OAuth
             await this.simulateApiCall();
             
             this.currentUser = new User({
@@ -85,13 +79,10 @@ export class Auth {
     }
 
     saveToStorage() {
-        // Note: In a real app, you'd save to localStorage
-        // For demo purposes, we'll just keep it in memory
         console.log('User session saved');
     }
 
     loadFromStorage() {
-        // Note: In a real app, you'd load from localStorage
         console.log('Loading user session...');
     }
 

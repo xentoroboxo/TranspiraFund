@@ -20,7 +20,7 @@ body {
 }
 
 /* Card components */
-.card {
+.card, .auth-container {
     background: rgba(255,255,255,0.03);
     padding: 2rem;
     border-radius: 14px;
@@ -55,19 +55,19 @@ p {
 }
 
 /* Form components */
-.field {
+.field, .form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
 }
 
-.field label {
+.field label, .form-group label {
     margin-bottom: 0.3rem;
     font-size: 0.9rem;
     color: #9aa4b2;
 }
 
-.field input {
+.field input, .form-group input {
     padding: 0.7rem;
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.1);
@@ -75,7 +75,7 @@ p {
     color: #fff;
 }
 
-.field input:focus {
+.field input:focus, .form-group input:focus {
     outline: none;
     border-color: #7c5cff;
 }
@@ -147,6 +147,7 @@ p {
 .small a {
     color: #7c5cff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .small a:hover {
@@ -166,3 +167,20 @@ p {
 .mb-1 { margin-bottom: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 2rem; }
+
+.user-info p {
+    margin: 0.5rem 0;
+    color: #e6eef6;
+}
+
+.dashboard-actions {
+    margin: 1.5rem 0;
+}
+
+.error {
+    background: rgba(255, 85, 85, 0.1);
+    border: 1px solid rgba(255, 85, 85, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}

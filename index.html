@@ -3,22 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppPortal</title>
+    <title>TranspiraFund</title>
+    <!-- Critical styles to prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, #071021 0%, #0b1220 50%);
+            color: #e6eef6;
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .loading {
+            color: #9aa4b2;
+            text-align: center;
+        }
+    </style>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div class="container">
+            <div class="loading">Loading TranspiraFund...</div>
+        </div>
+    </div>
     
-    <!-- Load all JavaScript modules -->
-    <script type="module" src="js/models/User.js"></script>
-    <script type="module" src="js/models/Auth.js"></script>
-    <script type="module" src="js/views/LandingView.js"></script>
-    <script type="module" src="js/views/LoginView.js"></script>
-    <script type="module" src="js/views/RegisterView.js"></script>
-    <script type="module" src="js/controllers/AuthController.js"></script>
-    <script type="module" src="js/controllers/NavigationController.js"></script>
-    <script type="module" src="js/utils/Router.js"></script>
-    <script type="module" src="components/templates.js"></script>
+    <!-- Error handling -->
+    <script>
+        window.addEventListener('error', (event) => {
+            console.error('Script error:', event.error);
+            document.getElementById('app').innerHTML = `
+                <div class="container">
+                    <div style="color: #ff5555; text-align: center;">
+                        <h2>Error Loading Application</h2>
+                        <p>Please check the console for details.</p>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+    
+    <script>
+        console.log('index.html loaded');
+    </script>
     <script type="module" src="js/app.js"></script>
 </body>
 </html>

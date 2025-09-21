@@ -1,0 +1,84 @@
+/* Container styling */
+#landing-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title styling */
+#landing-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+/* Button styling */
+#landing-container button {
+    width: 100%;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#login-btn {
+    background: #1976d2;
+    color: #fff;
+}
+
+#register-btn {
+    background: #43a047;
+    color: #fff;
+}
+
+#forgot-btn {
+    background: #f5f5f5;
+    color: #555;
+}
+
+#google-btn {
+    background: #fff;
+    color: #444;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Google icon styling */
+#google-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Button hover effects */
+#login-btn:hover {
+    background: #1565c0;
+}
+
+#register-btn:hover {
+    background: #388e3c;
+}
+
+#forgot-btn:hover {
+    background: #e0e0e0;
+}
+
+#google-btn:hover {
+    background: #f7f7f7;
+    border-color: #bbb;
+}

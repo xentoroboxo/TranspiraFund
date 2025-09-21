@@ -1,0 +1,168 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    background: linear-gradient(180deg, #071021 0%, #0b1220 50%);
+    color: #e6eef6;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Card components */
+.card {
+    background: rgba(255,255,255,0.03);
+    padding: 2rem;
+    border-radius: 14px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.landing-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 1rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #9aa4b2;
+    margin-bottom: 2rem;
+}
+
+/* Form components */
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.field label {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: #9aa4b2;
+}
+
+.field input {
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: transparent;
+    color: #fff;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: #7c5cff;
+}
+
+/* Button components */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.15s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #7c5cff, #5b8cff);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(92,69,255,0.14);
+}
+
+.btn-secondary, .btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #9aa4b2;
+}
+
+.btn-google {
+    background: #fff;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn-google img {
+    height: 18px;
+    width: 18px;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Layout utilities */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.small {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9aa4b2;
+    margin-top: 1rem;
+}
+
+.small a {
+    color: #7c5cff;
+    text-decoration: none;
+}
+
+.small a:hover {
+    text-decoration: underline;
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
